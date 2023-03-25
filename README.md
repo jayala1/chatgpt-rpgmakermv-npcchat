@@ -8,6 +8,8 @@ Look for name and turn on.
 
 Create a new Event
 Right click on contents--> new--> 3 tab--> Script add the following line
+
+
 $gameMessage.add('What do you want to say to the NPC?');$gameMessage.setFaceImage('PEOPLE1',5);$gameMessage.setChoices(['How was their day?', 'Say goodbye'],0,1);$gameMessage.setChoiceCallback(function(responseIndex){const npcPrompt = 'In the game world, the player encounters a non-player character named Sasha. Sasha is a barmaid. The player asks Sasha: "';;switch(responseIndex){case 0:$gameMessage.add('...');$gameMessage.setFaceImage('PEOPLE1',5);$gameMessage.chatGPT('how was your day?', npcPrompt);break;case 1:$gameMessage.add('Goodbye!');$gameMessage.setFaceImage('PEOPLE1',5);break;}});
 
 This will go into one line. Here is what you want to change.
